@@ -8,12 +8,12 @@
 
 @font-face {
     font-family: nord;
-    src: url(Norse-Bold.otf);
+    src: url(/blob/main/Norse-Bold.otf);
 }
 
 @font-face {
     font-family: quicksand;
-    src: url(quicksand/Quicksand-VariableFont_wght.ttf);
+    src: url(/blob/main/quicksand/Quicksand-VariableFont_wght.ttfcksand/Quicksand-VariableFont_wght.ttf);
 }
 
 :root {
@@ -37,8 +37,8 @@
     /* display: flex; */
     width: 70vw;
     height: 100vh;
-    background: url(https://images.unsplash.com/photo-1585202900225-6d3ac20a6962?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1587&q=80) no-repeat scroll center top transparent;
-    background-size: 1600px
+    background: url(/blob/main/splash.avif) no-repeat scroll center top transparent;
+    background-size: 1200px
 }
 
 .splash-logo-image {
