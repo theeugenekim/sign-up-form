@@ -1,0 +1,177 @@
+* {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid red; */
+    font-family: quicksand;
+}
+
+@font-face {
+    font-family: nord;
+    src: url(/Norse-Bold.otf);
+}
+
+@font-face {
+    font-family: quicksand;
+    src: url(/quicksand/Quicksand-VariableFont_wght.ttf);
+}
+
+:root {
+    --font: quicksand;
+}
+
+@media screen and (max-width: 1024px) {
+    .left-container {
+        display: none !important;
+    }
+}
+
+
+.page-container {
+    display:flex;
+}
+
+
+/* ------------------- */
+.left-container {
+    /* display: flex; */
+    width: 70vw;
+    height: 100vh;
+    background: url(/splash.avif) no-repeat scroll center top transparent;
+    background-size: 1600px
+}
+
+.splash-logo-image {
+    margin-top: 240px;
+    font-size: 110px;
+    padding-top: 30px;
+    color: white;
+    text-align: center;
+    background-color: rgba(0,0,0,0.6);
+    font-family: nord;
+    line-height: 100px;
+}
+
+.splash-image {
+    height: 80px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.splash-image {
+    height: 80px;
+    margin-right: 40px;
+    vertical-align: middle;
+}
+
+
+/* ------------------- */
+.right-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+}
+
+.header-container {
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    font-size: 1.2rem;
+    width: 45vw;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+fieldset {
+    display: grid;
+    grid-template-columns: 250px 250px;
+    justify-content: left;
+    grid-row-gap: 20px;
+    grid-column-gap: 10px;
+    border: none;
+    padding-bottom: 20px;
+    box-shadow: 0 6px 5px -4px lightgray;
+
+}
+
+label,
+input {
+    display: block;
+    font-family: quicksand;
+}
+
+label {
+    font-size: 12px;
+}
+
+input {
+    width: 200px;
+    border: 1px solid #c3c3c3;
+    height: 20px;
+    border-radius: 8px;
+    margin-top: 3px;
+    padding: 8px;
+}
+
+input:focus {
+    border: 2px solid #596D48;
+    outline: none;
+}
+
+#create-account {
+    border: none;
+    background-color: #596D48;
+    color: white;
+    padding: 13px;
+    width: 220px;
+    margin-bottom: 10px;
+    margin-top: 15px;
+    font-size: 15px;
+    border-radius: 9px;
+    box-shadow: 4px 5px 4px #888888;
+    font-weight: bolder;
+}
+
+#create-account:hover {
+    background-color: #4c5c3d;
+    font-size: 15.5px;
+}
+
+#create-account:hover {
+    background-color: #4c5c3d;
+    font-size: 15.5px;
+}
+
+#create-account:active {
+    position: relative;
+    top: 1px;
+}
+
+.login-link,
+.login-link:visited {
+    text-decoration: none;
+    color: #596D48;
+    font-weight: bolder;
+    font-size: 1.1rem;
+}
+
+legend {
+    font-size: 25px;
+}
+
+legend + p {
+    font-size: 12px;
+}
+
+/* ------------------ */
+.error {
+    color:red;
+    font-size: 0.8em;
+}

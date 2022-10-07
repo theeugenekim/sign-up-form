@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-container">
+        <div class="left-container">
+            <p class="splash-logo-image"><img class="splash-image" src="odin-lined.png">Mythos</p>
+        </div>
+
+
+        <div class="right-container">
+            <div class="header-container">
+                <h2>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started.</h2>
+                <h3>You <em>know</em> you want to.<h3> 
+            </div>
+
+            <div class="sign-up-form">
+                <form>
+                    <legend>Let's do this!</legend>
+                    <p>Required fields start with an <span aria-label="required">*</span>.</p>
+
+                    <fieldset>
+                        <div>
+                            <label for="firstName">*FIRST NAME</label>
+                            <input type="text" id="firstName" name="firstName" minlength="1" maxlength="20" required pattern="[A-Za-z]+" title="Name must contain only letters.">
+                        </div>
+                        <div>
+                            <label for="lastName">*LAST NAME</label>
+                            <input type="text" id="lastName" name="lastName" minlength="1" maxlength="20" required pattern="[A-Za-z]+" title="Last name must contain only letters.">
+                        </div>
+                        <div>
+                            <label for="email">*EMAIL</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div>
+                            <label for="phoneNumber">*PHONE NUMBER</label>
+                            <input type="tel" id="phoneNumber" name="phoneNumber" placeholder ="10-digit Number" maxlength="10" required pattern="[0-9]{10}">
+                        </div>
+                        <div>
+                            <label for="password">*PASSWORD
+                                <input type="password" id="password" name="password" required>
+                            </label>
+                            <p class="error"></p>
+
+                        </div>
+                        <div>
+                            <label for="confirm-password">*CONFIRM PASSWORD
+                                <input type="password" id="confirm-password" name="confirm-password" required>
+                            </label>
+                        </div>
+                    </fieldset>
+
+
+                    <div class="submit-button">
+                        <button onclick="return validate()" type="submit" id="create-account">Create Account</button>
+                    </div>
+
+                    <p class="login-option">Already have an account? <a href="" class="login-link">Log in</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>     
+        function validate() {
+            let pw1 = document.querySelector("#password").value
+            let pw2 = document.querySelector("#confirm-password").value
+            let error = document.querySelector(".error")
+
+            if (pw1.length == 0 || pw2.length == 0) {
+                error.innerHTML = "*Password must not be blank."
+                console.log("bbb")
+                return false
+            } else if (pw1 !== pw2) {
+                console.log("asdfa")
+                error.innerHTML = "*Password does not match."
+                return false
+            } else {
+                error.innerHTML = ""
+                return true
+            }
+        }
+    </script>
+</body>
+</html>
